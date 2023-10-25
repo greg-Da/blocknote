@@ -1,14 +1,12 @@
 import React from 'react'
 import '../style/Content.css'
-// import showdown from 'shodown'
+import showdown from 'showdown'
 
 class Content extends React.Component {
 
     constructor(props){
         super(props)
-        console.log(this.props.content)
     }
-    state = {title: this.props.content.title, content: this.props.content.content}
 
     getFormValue = () => {
         const title = document.getElementById('contentFormInput')
@@ -21,8 +19,8 @@ class Content extends React.Component {
 
     console.log(this.state)
     const {content} = this.props
-    // const converter = new showdown.Converter()
-    // const text = converter.makeHtml(content.content)
+    let converter = new showdown.Converter()
+    let text = converter.makeHtml(content.content);
 
 
     return (
@@ -30,7 +28,7 @@ class Content extends React.Component {
       <main className='p-3 col-8 border-start border-white'>
         <div id='contentDisplay'>
             <h1 className='title lgTitle'>{content.title}</h1>
-            <p className='text-white'>{content.content}</p>
+            <div dangerouslySetInnerHTML={{__html: text}} className='text-white'></div>
         </div>
         
         
