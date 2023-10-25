@@ -1,0 +1,15 @@
+#contentForm{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+}
+
+#contentForm input::placeholder, #contentForm textarea::placeholder {
+    color: lightgray;
+    opacity: 1; /* Firefox */
+}
+
+#contentForm input::-ms-input-placeholder, #contentForm textarea::-ms-input-placeholder { /* Edge 12-18 */
+    color: lightgray;
+}
+

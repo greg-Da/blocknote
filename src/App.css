@@ -1,0 +1,19 @@
+#root {
+  display: flex;
+  background-color: black;
+  min-height: 100vh;
+}
+
+#contentDisplay, #contentForm{
+  height: 50%;
+}
+
+.title{
+  color: red;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.lgTitle{
+  font-size: 50px;
+}
